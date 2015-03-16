@@ -1,4 +1,12 @@
-﻿(function () {
+﻿/* ========================================================================
+ * tabValidator v0.1.0
+ * https://github.com/huhubun/tabValidator
+ * ========================================================================
+ * Copyright 2015 huhubun
+ * Licensed under MIT (https://github.com/huhubun/tabValidator/master/LICENSE)
+ * ======================================================================== */
+
+(function () {
 	// constructor
 	$.tabValidator = function (option) {
 		$.extend(this.settings, option);
