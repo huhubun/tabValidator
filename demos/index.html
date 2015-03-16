@@ -1,29 +1,162 @@
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
-	<script src="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/bootstrap.min.js"></script>
-	<link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>tabValidator Sample</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/bootstrap.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.js"></script>
+    <script src="./Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="../build/bun.tabValidator.js"></script>
+    <link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .field-validation-error {
+            color: #D9534F;
+        }
+    </style>
 </head>
 <body>
-	<div role="tabpanel">
+    <div class="container">
+        <div class="page-header">
+            <h1>tabValidator <small>Sample</small></h1>
+        </div>
 
-	<!-- Nav tabs -->
-	<ul class="nav nav-tabs" role="tablist">
-		<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Tab A</a></li>
-		<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Tab B</a></li>
-		<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Tab C</a></li>
-		<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Tab D</a></li>
-	</ul>
+        <form action="/" method="post" novalidate="novalidate">
+            <div role="tabpanel">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="active" role="presentation"><a role="tab" href="#general2" data-toggle="tab">General <span class="label label-danger">1</span></a></li>
+                    <li role="presentation"><a role="tab" href="#communications2" data-toggle="tab">Communications <span class="label label-danger"></span></a></li>
+                    <li role="presentation"><a role="tab" href="#miscellaneous2" data-toggle="tab">Miscellaneous <span class="label label-danger"></span></a></li>
+                </ul>
+                <div class="row tab-content" style="margin-top: 1em;">
+                    <div class="tab-pane fade in active form-horizontal" id="general2" role="tabpanel">
+                        <!-- Left -->
+                        <div class="col-xs-12 col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-xs-4" for="FirstName">FirstName</label>
+                                <div class="col-xs-8">
+                                    <input name="FirstName" class="form-control input-sm" id="FirstName" type="text" placeholder="Required" value="" data-val-required="FirstName is required" data-val="true">
+                                    <span class="field-validation-valid" data-valmsg-replace="true" data-valmsg-for="FirstName"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-4" for="LastName">LastName</label>
+                                <div class="col-xs-8">
+                                    <input name="LastName" class="form-control input-sm" id="LastName" type="text" placeholder="Required" value="" data-val-required="LastName is required" data-val="true">
+                                    <span class="field-validation-valid" data-valmsg-replace="true" data-valmsg-for="LastName"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-4" for="Gender">Gender</label>
+                                <div class="col-xs-8">
+                                    <input name="Gender" class="form-control input-sm" id="Gender" type="text" placeholder="Required" value="" data-val-required="Gender is required" data-val="true">
+                                    <span class="field-validation-valid" data-valmsg-replace="true" data-valmsg-for="Gender"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Left End -->
+                        <!-- Right -->
+                        <div class="col-xs-12 col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-xs-4" for="NickName">NickName</label>
+                                <div class="col-xs-8">
+                                    <input name="NickName" class="form-control input-sm" id="NickName" type="text" placeholder="Please enter 3 ~ 5 characters" value="" data-val="true" data-val-length-min="3" data-val-length-max="5" data-val-length="Please enter 3 ~ 5 characters">
+                                    <span class="field-validation-valid" data-valmsg-replace="true" data-valmsg-for="NickName"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-4" for="Nationality">Nationality</label>
+                                <div class="col-xs-8">
+                                    <input name="Nationality" class="form-control input-sm" id="Nationality" type="text" value="">
+                                    <span class="field-validation-valid" data-valmsg-replace="true" data-valmsg-for="Nationality"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-4" for="Language">Language</label>
+                                <div class="col-xs-8">
+                                    <input name="Language" class="form-control input-sm" id="Language" type="text" value="" data-val-required="Language is required" data-val="true">
 
-	<!-- Tab panes -->
-	<div class="tab-content">
-		<div role="tabpanel" class="tab-pane fade in active" id="home">Tab A</div>
-		<div role="tabpanel" class="tab-pane fade" id="profile">Tab B</div>
-		<div role="tabpanel" class="tab-pane fade" id="messages">Tab C</div>
-		<div role="tabpanel" class="tab-pane fade" id="settings">Tab D</div>
-	</div>
+                                    <span class="field-validation-error" data-valmsg-replace="true" data-valmsg-for="PostCode">Language is required @ Server Validate</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right End -->
+                    </div>
+                    <div class="tab-pane fade form-horizontal" id="communications2" role="tabpanel">
+                        <!-- Left -->
+                        <div class="col-xs-12 col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-xs-4" for="Email">Email</label>
+                                <div class="col-xs-8">
+                                    <input name="Email" class="form-control input-sm" id="Email" type="text" placeholder="Required and EmailAddress" value="" data-val-required="Email is required" data-val="true" data-val-email="Email 字段不是有效的电子邮件地址。">
+                                    <span class="field-validation-valid" data-valmsg-replace="true" data-valmsg-for="Email"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-4" for="Phone">Phone</label>
+                                <div class="col-xs-8">
+                                    <input name="Phone" class="form-control input-sm" id="Phone" type="text" placeholder="Format: XXXX-XXXXXXXX" value="" data-val="true" data-val-regex-pattern="^[0-9]{4}-[0-9]{8}" data-val-regex="Format error, it should be XXXX-XXXXXXXX">
+                                    <span class="field-validation-valid" data-valmsg-replace="true" data-valmsg-for="Phone"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Left End -->
+                        <!-- Right -->
+                        <div class="col-xs-12 col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-xs-4" for="PostCode">PostCode</label>
+                                <div class="col-xs-8">
+                                    <input name="PostCode" class="form-control input-sm" id="PostCode" type="text" value="">
+                                    <span class="field-validation-valid" data-valmsg-replace="true" data-valmsg-for="PostCode"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-4" for="Address">Address</label>
+                                <div class="col-xs-8">
+                                    <input name="Address" class="form-control input-sm" id="Address" type="text" value="">
+                                    <span class="field-validation-valid" data-valmsg-replace="true" data-valmsg-for="Address"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right End -->
+                    </div>
+                    <div class="tab-pane fade" id="miscellaneous2" role="tabpanel">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label for="Hobby">Hobby</label>
+                                <input name="Hobby" class="form-control input-sm" id="Hobby" type="text" placeholder="Required" value="" data-val-required="Hobby is required" data-val="true">
+                                <span class="field-validation-valid" data-valmsg-replace="true" data-valmsg-for="Hobby"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label for="Remarks">Remarks</label>
+                                <textarea name="Remarks" class="form-control" id="Remarks" placeholder="No more than ten characters" rows="2" cols="20" data-val="true" data-val-length-max="10" data-val-length="No more than ten characters">No more than ten characters</textarea>
+                                <span class="field-validation-valid" data-valmsg-replace="true" data-valmsg-for="Remarks"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <button class="btn btn-default" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
-	</div>
+    <script>
+        // 默认情况下，jQuery Validator会忽略验证标记为:hidden的元素，取消忽略才能同时验证所有tab页的表单控件
+        $.validator.setDefaults({ ignore: [] });
+
+        $(document).ready(function () {
+            new $.tabValidator({
+                // 要监控的表单
+                formElement: $($("form")[0]),
+                // 展示的容器
+                tabBadges: $(".label.label-danger")
+            });
+        })
+    </script>
 </body>
 </html>
