@@ -16,6 +16,12 @@ tabValidator 依赖以下插件：
 * jquery.validate
 * [jquery.validate.unobtrusive](https://github.com/aspnet/jquery-validation-unobtrusive)
 
+## 安装
+#### NuGet
+```powershell
+Install-Package bun.tabValidator
+```
+
 ## 使用
 要使用 tabValidator，您必须准备好上一节中的依赖，如果使用ASP.NET MVC5创建的项目，将自动包含这些插件，若是其它框架或平台，可以尝试通过NuGet或其他手段添加上述依赖。
 
