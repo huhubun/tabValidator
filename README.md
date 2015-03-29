@@ -45,7 +45,7 @@ For other platforms, try using NuGet or other method to add the above memotioned
 <script src="./Scripts/bun.tabValidator.js"></script>
 ```
 * Uncheck JQuery Validate's ignorance setting, please make sure the jquery.validate control has
-* already been loaded before doing this.
+already been loaded before doing this.
 * 取消 jQuery Validate 的忽略设置，请确保这一步操作在 jquery.validate 控件载入之后进行
 ```javascript
   $.validator.setDefaults({ ignore: [] });
