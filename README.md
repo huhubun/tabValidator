@@ -95,14 +95,14 @@ already been loaded before doing this.
     </div>
 </form>
 ```
-Different from Bootstrap tab, We need to have a place for our error display. This can bne done using Bootstrap's "Label" control, add that to every node in the tablist, as shown below:
+Different from Bootstrap tab, We need to have a place for our error display. This can bne done using Bootstrap's "Label" control, add that to every node in the tablist, as shown below:  
 与Bootstrap的标签页不同的是，我们需要预留错误显示的位置，错误显示通过Bootstrap的“标签（label）”组件实现，将它添加到 tablist 的每一个节点中，即：
 ```html
 <li class="active" role="presentation"><a role="tab" href="#general" data-toggle="tab">General <span class="label label-danger"></span></a></li>
 ```
 
 Note: tabValidator associate Tab tag with tab page using ID, please put choose a correct place to display error.
-If you need to activate jQuery Validate, a corresponding tag will be needed (Please use Razor for ASP.NET MVC), an example is shown below:
+If you need to activate jQuery Validate, a corresponding tag will be needed (Please use Razor for ASP.NET MVC), an example is shown below:  
 注意：tabValidator 通过ID关联Tab标签和标签页，请将错误显示位置放在正确的地方。
 另外，要启用jQuery Validate验证，需要添加对应标记（若是ASP.NET MVC，请使用Razor），如：
 ```html
@@ -120,9 +120,9 @@ new $.tabValidator({
     tabBadges: $(".label.label-danger")
 });
 ```
-formElement is the jQuery object in form, choose the form that wrap the tab page
-formElement 表示form表单jQuery对象，选中包裹住 tab 页的表单即可
-tabBadges is hte place to display the number of errors
+formElement is the jQuery object in form, choose the form that wrap the tab page  
+formElement 表示form表单jQuery对象，选中包裹住 tab 页的表单即可  
+tabBadges is the place to display the number of errors  
 tabBadges 表示错误数量显示的位置
 
 * For ASP.NET MVC, if there is no validation at server side, the following tag will be generated automatically
@@ -130,7 +130,7 @@ tabBadges 表示错误数量显示的位置
 ```html
 <span class="field-validation-error" data-valmsg-replace="true" data-valmsg-for="PostCode">Language is required</span>
 ```
-tabValidator also support collecting these mistakes and display correspondingly. It also support jumping to the first error in the tab
+tabValidator also support collecting these mistakes and display correspondingly. It also support jumping to the first error in the tab  
 tabValidator 支持将这些错误数量一同统计并显示，同时支持自动跳转到第一个错误所在的标签页中
 
 For a more specific demo, please go to https://github.com/huhubun/tabValidator/tree/master/demos
