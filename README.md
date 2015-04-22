@@ -32,9 +32,9 @@ tabValidator 依赖以下插件：
 
 ## Install
 ### Nuget
-powershell
+```powershell
 Install-Package bun.tabValidator
-
+```
 ## 安装
 #### NuGet
 ```powershell
