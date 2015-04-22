@@ -1,7 +1,6 @@
 # Introducing tabValidator
-tabValidator is a tool for showing the number of errors on the Tab 
-# tabValidator
 ![](https://github.com/huhubun/tabValidator/raw/master/images/sample.png)
+tabValidator is a tool for showing the number of errors on the Tab 
 tabValidator 是一个帮助表单在Tab标签上显示错误数量，并自动跳转到对应Tab页的小插件。
 当表单中有许多内容，又必须在一页中进行显示时，我会为它添加标签页，但这时表单验证的提示就会变得很麻烦，于是 tabValidator 诞生了！
 
@@ -96,7 +95,7 @@ already been loaded before doing this.
     </div>
 </form>
 ```
-Different from Bootstrap tab, We need to have a place for our error display. This can bne done using Bootstrap's "Label" control, add that to every node in the tablist, as shown below: 
+Different from Bootstrap tab, We need to have a place for our error display. This can bne done using Bootstrap's "Label" control, add that to every node in the tablist, as shown below:
 与Bootstrap的标签页不同的是，我们需要预留错误显示的位置，错误显示通过Bootstrap的“标签（label）”组件实现，将它添加到 tablist 的每一个节点中，即：
 ```html
 <li class="active" role="presentation"><a role="tab" href="#general" data-toggle="tab">General <span class="label label-danger"></span></a></li>
@@ -137,5 +136,5 @@ tabValidator 支持将这些错误数量一同统计并显示，同时支持自�
 For a more specific demo, please go to https://github.com/huhubun/tabValidator/tree/master/demos
 具体演示，请参见 https://github.com/huhubun/tabValidator/tree/master/demos
 
-## Copyright and license
-Code and documentation copyright 2015 huhubun. Code released under [the MIT license](https://github.com/huhubun/tabValidator/blob/master/LICENSE)
+## License
+Code released under [the MIT license](https://github.com/huhubun/tabValidator/blob/master/LICENSE)
